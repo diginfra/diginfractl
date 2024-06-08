@@ -1,0 +1,47 @@
+project_name: diginfractl
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: "diginfractl"
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - 386
+      - arm64
+    ignore:
+      - goos: darwin
+        goarch: 386
+      - goos: windows
+        goarch: 386
+
+    ldflags: |
+      -X github.com/diginfra/diginfractl/cmd/version.buildDate={{ .Date }}
+      -X github.com/diginfra/diginfractl/cmd/version.gitCommit={{ .Commit }}
+      -X github.com/diginfra/diginfractl/cmd/version.semVersion={{ if .IsSnapshot }}{{ .Commit }}{{ else }}{{ .Version }}{{ end }}
+      -s
+      -w
+    main: .
+    env:
+      - GO111MODULE=on
+      - CGO_ENABLED=0
+
+archives:
+  - id: windows
+    format_overrides:
+      - goos: windows
+        format: zip
+
+snapshot:
+  name_template: "{{ .ShortCommit }}"
+
+release:
+  prerelease: auto
+  mode: replace
+
+changelog:
+  use: github-native

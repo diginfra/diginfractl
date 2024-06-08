@@ -1,0 +1,9 @@
+configs:
+    - added_timestamp: "2022-10-07 10:53:40"
+      name: diginfra
+      updated_timestamp: "2022-10-07 10:53:40"
+      url: https://diginfra.github.io/diginfractl/index.yaml
+    - added_timestamp: "2022-10-07 10:53:40"
+      name: test
+      updated_timestamp: "2022-10-07 12:06:21"
+      url: https://diginfra.github.io/test/index.yaml
