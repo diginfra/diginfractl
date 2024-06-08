@@ -1,0 +1,480 @@
+- name: application-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/rules/application-rules
+  description: This rules files has been archived and is no longer maintained
+  home: https://github.com/diginfra/rules/blob/main/archive/application_rules.yaml
+  keywords:
+    - application-rules
+  license: apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/rules/blob/main/archive/application_rules.yaml
+- name: cloudtrail
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/cloudtrail
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Reads Cloudtrail JSON logs from files/S3 and injects as events
+  home: https://github.com/diginfra/plugins/tree/main/plugins/cloudtrail
+  keywords:
+    - audit
+    - user-activity
+    - api-usage
+    - aws
+    - cloudtrail
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/cloudtrail
+- name: cloudtrail-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/plugins/ruleset/cloudtrail
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Reads Cloudtrail JSON logs from files/S3 and injects as events
+  home: https://github.com/diginfra/plugins/tree/main/plugins/cloudtrail
+  keywords:
+    - audit
+    - user-activity
+    - api-usage
+    - aws
+    - cloudtrail-rules
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/cloudtrail/rules
+- name: dummy
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/dummy
+  description: Reference plugin used to document interface
+  home: https://github.com/diginfra/plugins/tree/main/plugins/dummy
+  keywords:
+    - dummy
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/dummy
+- name: dummy_c
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/dummy_c
+  description: Like dummy, but written in C++
+  home: https://github.com/diginfra/plugins/tree/main/plugins/dummy_c
+  keywords:
+    - dummy_c
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/dummy_c
+- name: diginfra-incubating-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/rules/diginfra-incubating-rules
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/rules/
+        certificate-github-workflow: ""
+  description: Diginfra incubating rules
+  home: https://github.com/diginfra/rules/blob/main/rules/diginfra-incubating_rules.yaml
+  keywords:
+    - diginfra-incubating-rules
+  license: apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/rules/blob/main/rules/diginfra-incubating_rules.yaml
+- name: diginfra-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/rules/diginfra-rules
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/rules/
+        certificate-github-workflow: ""
+  description: Diginfra rules that are loaded by default
+  home: https://github.com/diginfra/rules/blob/main/rules/diginfra_rules.yaml
+  keywords:
+    - diginfra-rules
+  license: apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/rules/blob/main/rules/diginfra_rules.yaml
+- name: diginfra-sandbox-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/rules/diginfra-sandbox-rules
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/rules/
+        certificate-github-workflow: ""
+  description: Diginfra sandbox rules
+  home: https://github.com/diginfra/rules/blob/main/rules/diginfra-sandbox_rules.yaml
+  keywords:
+    - diginfra-sandbox-rules
+  license: apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/rules/blob/main/rules/diginfra-sandbox_rules.yaml
+- name: gcpaudit
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/gcpaudit
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Read GCP Audit Logs
+  home: https://github.com/diginfra/plugins/tree/main/plugins/gcpaudit
+  keywords:
+    - audit
+    - audit-log
+    - audit-events
+    - gcp
+    - gcpaudit
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/gcpaudit
+- name: gcpaudit-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/plugins/ruleset/gcpaudit
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Read GCP Audit Logs
+  home: https://github.com/diginfra/plugins/tree/main/plugins/gcpaudit
+  keywords:
+    - audit
+    - audit-log
+    - audit-events
+    - gcp
+    - gcpaudit-rules
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/gcpaudit/rules
+- name: github
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/github
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Github Webhook Events
+  home: https://github.com/diginfra/plugins/tree/main/plugins/github
+  keywords:
+    - audit
+    - log-events
+    - webhook
+    - github-activity
+    - github
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/github
+- name: github-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/plugins/ruleset/github
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Github Webhook Events
+  home: https://github.com/diginfra/plugins/tree/main/plugins/github
+  keywords:
+    - audit
+    - log-events
+    - webhook
+    - github-activity
+    - github
+    - github-rules
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/github/rules
+- name: json
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/json
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Extract values from any JSON payload
+  home: https://github.com/diginfra/plugins/tree/main/plugins/json
+  keywords:
+    - json-events
+    - json-payload
+    - extractor
+    - json
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/json
+- name: k8saudit
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/k8saudit
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Read Kubernetes Audit Events and monitor Kubernetes Clusters
+  home: https://github.com/diginfra/plugins/tree/main/plugins/k8saudit
+  keywords:
+    - audit
+    - audit-log
+    - audit-events
+    - kubernetes
+    - k8saudit
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/k8saudit
+- name: k8saudit-eks
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/k8saudit-eks
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Read Kubernetes Audit Events from AWS EKS Clusters
+  home: https://github.com/diginfra/plugins/tree/main/plugins/k8saudit-eks
+  keywords:
+    - audit
+    - audit-log
+    - audit-events
+    - kubernetes
+    - eks
+    - aws
+    - k8saudit-eks
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/k8saudit-eks
+- name: k8saudit-gke
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/k8saudit-gke
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Read Kubernetes Audit Events from GKE Clusters
+  home: https://github.com/diginfra/plugins/tree/main/plugins/k8saudit-gke
+  keywords:
+    - audit
+    - audit-log
+    - audit-events
+    - kubernetes
+    - gke
+    - k8saudit-gke
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/k8saudit-gke
+- name: k8saudit-gke-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/plugins/ruleset/k8saudit-gke
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Read Kubernetes Audit Events from GKE Clusters
+  home: https://github.com/diginfra/plugins/tree/main/plugins/k8saudit-gke
+  keywords:
+    - audit
+    - audit-log
+    - audit-events
+    - kubernetes
+    - gke
+    - k8saudit-gke-rules
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/k8saudit-gke/rules
+- name: k8saudit-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/plugins/ruleset/k8saudit
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Read Kubernetes Audit Events and monitor Kubernetes Clusters
+  home: https://github.com/diginfra/plugins/tree/main/plugins/k8saudit
+  keywords:
+    - audit
+    - audit-log
+    - audit-events
+    - kubernetes
+    - k8saudit-rules
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/k8saudit/rules
+- name: k8smeta
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/k8smeta
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Enriche Diginfra syscall flow with Kubernetes Metadata
+  home: https://github.com/diginfra/plugins/tree/main/plugins/k8smeta
+  keywords:
+    - kubernetes
+    - syscall
+    - extractor
+    - k8smeta
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/k8smeta
+- name: okta
+  type: plugin
+  registry: ghcr.io
+  repository: diginfra/plugins/plugin/okta
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Okta Log Events
+  home: https://github.com/diginfra/plugins/tree/main/plugins/okta
+  keywords:
+    - audit
+    - log-events
+    - okta
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/okta
+- name: okta-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: diginfra/plugins/ruleset/okta
+  signature:
+    cosign:
+        certificate-oidc-issuer: https://token.actions.githubusercontent.com
+        certificate-oidc-issuer-regexp: ""
+        certificate-identity: ""
+        certificate-identity-regexp: https://github.com/diginfra/plugins/
+        certificate-github-workflow: ""
+  description: Okta Log Events
+  home: https://github.com/diginfra/plugins/tree/main/plugins/okta
+  keywords:
+    - audit
+    - log-events
+    - okta
+    - okta-rules
+  license: Apache-2.0
+  maintainers:
+    - email: cncf-diginfra-dev@lists.cncf.io
+      name: The Diginfra Authors
+  sources:
+    - https://github.com/diginfra/plugins/tree/main/plugins/okta/rules
