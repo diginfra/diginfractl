@@ -30,10 +30,10 @@ func TestCheckRequirements(t *testing.T) {
 	printer := output.NewPrinter(pterm.LogLevelDebug, pterm.LogFormatterJSON, os.Stdout)
 
 	type testArtifact struct {
-		conf          *oci.ArtifactConfig
+		conf             *oci.ArtifactConfig
 		diginfraVersions map[string]string
-		expectErr     bool
-		testName      string
+		expectErr        bool
+		testName         string
 	}
 	var testArtifactConfigs = []testArtifact{
 		{
@@ -43,8 +43,8 @@ func TestCheckRequirements(t *testing.T) {
 				Requirements: []oci.ArtifactRequirement{{Name: "engine_version_semver", Version: "0.26.0"}},
 			},
 			diginfraVersions: map[string]string{"engine_version_semver": "0.26.0", "engine_version": "26"},
-			expectErr:     false,
-			testName:      "New Diginfra with new rules with new semver engine version",
+			expectErr:        false,
+			testName:         "New Diginfra with new rules with new semver engine version",
 		},
 		{
 			conf: &oci.ArtifactConfig{
@@ -53,8 +53,8 @@ func TestCheckRequirements(t *testing.T) {
 				Requirements: []oci.ArtifactRequirement{{Name: "engine_version_semver", Version: "26"}},
 			},
 			diginfraVersions: map[string]string{"engine_version_semver": "0.26.0", "engine_version": "26"},
-			expectErr:     true,
-			testName:      "New Diginfra with new rules with old int engine version",
+			expectErr:        true,
+			testName:         "New Diginfra with new rules with old int engine version",
 		},
 		{
 			conf: &oci.ArtifactConfig{
@@ -63,8 +63,8 @@ func TestCheckRequirements(t *testing.T) {
 				Requirements: []oci.ArtifactRequirement{{Name: "engine_version_semver", Version: "0.26.0"}},
 			},
 			diginfraVersions: map[string]string{"engine_version": "26"},
-			expectErr:     true,
-			testName:      "Old Diginfra with new rules with new semver engine version",
+			expectErr:        true,
+			testName:         "Old Diginfra with new rules with new semver engine version",
 		},
 		{
 			conf: &oci.ArtifactConfig{
@@ -73,8 +73,8 @@ func TestCheckRequirements(t *testing.T) {
 				Requirements: []oci.ArtifactRequirement{{Name: "engine_version_semver", Version: "26"}},
 			},
 			diginfraVersions: map[string]string{"engine_version": "26"},
-			expectErr:     true,
-			testName:      "Old Diginfra with new new rules with old int engine version",
+			expectErr:        true,
+			testName:         "Old Diginfra with new new rules with old int engine version",
 		},
 		{
 			conf: &oci.ArtifactConfig{
@@ -83,8 +83,8 @@ func TestCheckRequirements(t *testing.T) {
 				Requirements: []oci.ArtifactRequirement{{Name: "engine_version", Version: "26"}},
 			},
 			diginfraVersions: map[string]string{"engine_version_semver": "0.26.0", "engine_version": "26"},
-			expectErr:     false,
-			testName:      "New Diginfra with old rules with old int engine version",
+			expectErr:        false,
+			testName:         "New Diginfra with old rules with old int engine version",
 		},
 		{
 			conf: &oci.ArtifactConfig{
@@ -93,8 +93,8 @@ func TestCheckRequirements(t *testing.T) {
 				Requirements: []oci.ArtifactRequirement{{Name: "engine_version", Version: "0.26.0"}},
 			},
 			diginfraVersions: map[string]string{"engine_version_semver": "0.26.0", "engine_version": "26"},
-			expectErr:     true,
-			testName:      "New Diginfra with old rules with new semver engine version",
+			expectErr:        true,
+			testName:         "New Diginfra with old rules with new semver engine version",
 		},
 		{
 			conf: &oci.ArtifactConfig{
@@ -103,8 +103,8 @@ func TestCheckRequirements(t *testing.T) {
 				Requirements: []oci.ArtifactRequirement{{Name: "engine_version", Version: "26"}},
 			},
 			diginfraVersions: map[string]string{"engine_version": "26"},
-			expectErr:     false,
-			testName:      "Old Diginfra with old rules with old int engine version",
+			expectErr:        false,
+			testName:         "Old Diginfra with old rules with old int engine version",
 		},
 		{
 			conf: &oci.ArtifactConfig{
@@ -113,8 +113,8 @@ func TestCheckRequirements(t *testing.T) {
 				Requirements: []oci.ArtifactRequirement{{Name: "engine_version", Version: "0.26.0"}},
 			},
 			diginfraVersions: map[string]string{"engine_version": "26"},
-			expectErr:     true,
-			testName:      "Old Diginfra with old rules with new semver engine version",
+			expectErr:        true,
+			testName:         "Old Diginfra with old rules with new semver engine version",
 		},
 	}
 

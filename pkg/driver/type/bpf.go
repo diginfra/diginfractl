@@ -20,9 +20,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/docker/docker/pkg/homedir"
 	"github.com/diginfra/driverkit/cmd"
 	"github.com/diginfra/driverkit/pkg/kernelrelease"
+	"github.com/docker/docker/pkg/homedir"
 
 	"github.com/diginfra/diginfractl/pkg/output"
 )

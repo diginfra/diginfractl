@@ -28,10 +28,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/docker/docker/pkg/homedir"
 	"github.com/diginfra/driverkit/cmd"
 	"github.com/diginfra/driverkit/pkg/driverbuilder"
 	"github.com/diginfra/driverkit/pkg/kernelrelease"
+	"github.com/docker/docker/pkg/homedir"
 	"golang.org/x/net/context"
 	"gopkg.in/ini.v1"
 

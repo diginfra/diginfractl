@@ -121,12 +121,12 @@ func New(ref string, printer *output.Printer, conf *Config) (*Follower, error) {
 	}
 
 	return &Follower{
-		ref:           ref,
-		tag:           tag,
-		tmpDir:        tmpDir,
-		Puller:        puller,
-		Config:        conf,
-		logger:        printer.Logger,
+		ref:              ref,
+		tag:              tag,
+		tmpDir:           tmpDir,
+		Puller:           puller,
+		Config:           conf,
+		logger:           printer.Logger,
 		DiginfraVersions: conf.DiginfraVersions,
 	}, nil
 }

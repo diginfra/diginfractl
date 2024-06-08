@@ -82,15 +82,15 @@ type artifactFollowOptions struct {
 	*options.Common
 	*options.Registry
 	*options.Directory
-	tmpDir        string
-	every         time.Duration
-	cron          string
+	tmpDir           string
+	every            time.Duration
+	cron             string
 	diginfraVersions string
-	versions      config.DiginfraVersions
-	timeout       time.Duration
-	closeChan     chan bool
-	allowedTypes  oci.ArtifactTypeSlice
-	noVerify      bool
+	versions         config.DiginfraVersions
+	timeout          time.Duration
+	closeChan        chan bool
+	allowedTypes     oci.ArtifactTypeSlice
+	noVerify         bool
 }
 
 // NewArtifactFollowCmd returns the artifact follow command.
@@ -313,7 +313,7 @@ func (o *artifactFollowOptions) RunArtifactFollow(ctx context.Context, args []st
 			PlainHTTP:         o.PlainHTTP,
 			CloseChan:         o.closeChan,
 			TmpDir:            o.tmpDir,
-			DiginfraVersions:     o.versions,
+			DiginfraVersions:  o.versions,
 			AllowedTypes:      o.allowedTypes,
 			Signature:         sig,
 		}

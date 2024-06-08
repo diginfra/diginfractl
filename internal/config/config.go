@@ -173,13 +173,13 @@ type GcpAuth struct {
 
 // Follow represents the follower configuration.
 type Follow struct {
-	Every         time.Duration `mapstructure:"every"`
-	Artifacts     []string      `mapstructure:"artifacts"`
+	Every            time.Duration `mapstructure:"every"`
+	Artifacts        []string      `mapstructure:"artifacts"`
 	DiginfraVersions string        `mapstructure:"diginfraVersions"`
-	RulesfilesDir string        `mapstructure:"rulesFilesDir"`
-	PluginsDir    string        `mapstructure:"pluginsDir"`
-	TmpDir        string        `mapstructure:"pluginsDir"`
-	NoVerify      bool          `mapstructure:"noVerify"`
+	RulesfilesDir    string        `mapstructure:"rulesFilesDir"`
+	PluginsDir       string        `mapstructure:"pluginsDir"`
+	TmpDir           string        `mapstructure:"pluginsDir"`
+	NoVerify         bool          `mapstructure:"noVerify"`
 }
 
 // Install represents the installer configuration.
@@ -528,13 +528,13 @@ func Follower() (Follow, error) {
 	}
 
 	return Follow{
-		Every:         viper.GetDuration(ArtifactFollowEveryKey),
-		Artifacts:     artifacts,
+		Every:            viper.GetDuration(ArtifactFollowEveryKey),
+		Artifacts:        artifacts,
 		DiginfraVersions: viper.GetString(ArtifactFollowDiginfraVersionsKey),
-		RulesfilesDir: viper.GetString(ArtifactFollowRulesfilesDirKey),
-		PluginsDir:    viper.GetString(ArtifactFollowPluginsDirKey),
-		TmpDir:        viper.GetString(ArtifactFollowTmpDirKey),
-		NoVerify:      viper.GetBool(ArtifactNoVerifyKey),
+		RulesfilesDir:    viper.GetString(ArtifactFollowRulesfilesDirKey),
+		PluginsDir:       viper.GetString(ArtifactFollowPluginsDirKey),
+		TmpDir:           viper.GetString(ArtifactFollowTmpDirKey),
+		NoVerify:         viper.GetBool(ArtifactNoVerifyKey),
 	}, nil
 }
 
